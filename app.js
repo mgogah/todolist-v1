@@ -14,37 +14,9 @@ const workItems = [];
 
 app.get("/", function (req, res) {
 
-    // res.send("Hello");
-
-    
-    //    if(currentDay === 6 || currentDay === 0){
-    //     //res.write("<h1>Yay! it's weekend :)</h1>");
-    //     //res.write(today.getDate());
-    //     day = "Weekend";
-    //    // res.sendFile(__dirname + "/index.html");
-
-    //    }
-    //    else{
-    //     day = "Weekday";
-    //     //res.write("<h1>Boo! I have to work :( </h1>");
-    //     //res.sendFile(__dirname + "/index.html");
-
-    //    }
-    // switch (currentDay) {
-    //     case 0: day = "Sunday"; break;
-    //     case 1: day = "Monday"; break;
-    //     case 2: day = "Tuesday"; break;
-    //     case 3: day = "Wednesday"; break;
-    //     case 4: day = "Thursday"; break;
-    //     case 5: day = "Friday Weekend"; break;
-    //     case 6: day = "Saturday Weekend"; break;
-    //     default: console.log("Error unrequnized day!! with value: " + currentDay);
-    // }
-
     const day = date.getDate();
     res.render("list", { listTitle: day, newListItems: items });
 
-    // res.send();
 });
 
 app.post("/", function(req, res){
